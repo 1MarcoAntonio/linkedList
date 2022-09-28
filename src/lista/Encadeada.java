@@ -80,12 +80,23 @@ public class Encadeada {
             this.head = novo;
             tamanho++;
 
-        }else if (novo.getElement()>this.head.getElement() && novo.getElement()<this.tail.getElement()){
-            novo.setNext(this.head.getNext());
-            this.head.setNext(novo);
+        }
+        while (novo.getElement()>this.head.getElement()){
 
+
+            if (novo.getElement()>)
 
         }
     }
+
+    public void retorno(){
+        Node atual = this.head;
+        while (atual!=null){
+            System.out.println(atual.getElement());
+            atual = atual.getNext();
+        }
+
+    }
+
 
 }

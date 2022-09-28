@@ -6,8 +6,11 @@ public class Main {
         Encadeada lista = new Encadeada();
         lista.add(777);
         lista.add(21312);
-        System.out.println(lista.get(1).getElement());
-        System.out.println(lista.pertence(7));
+        lista.addNaOrdem(1);
+        lista.addNaOrdem(3);
+        lista.addNaOrdem(5);
+
+        lista.retorno();
 
     }
 }

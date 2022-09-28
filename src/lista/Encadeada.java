@@ -52,5 +52,18 @@ public class Encadeada {
         return atual;
     }
 
+    public String pertence(int existe ){
+        Node atual = this.head;
+        while (atual.getElement() == existe){
+            existe = atual.getElement();
+            break;
+        }
+        return"o elemento "+existe+" pertence a lista";
+    }
+
+    public void addMantendo(int element){
+        Node no = new Node(element);
+        while (this.head.getElement()>=no.getElement() &&  )
+    }
 
 }

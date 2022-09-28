@@ -7,7 +7,7 @@ public class Main {
         lista.add(777);
         lista.add(21312);
         System.out.println(lista.get(1).getElement());
-
+        System.out.println(lista.pertence(7));
 
     }
 }

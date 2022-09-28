@@ -4,6 +4,8 @@ public class Encadeada {
     private Node head;
     private Node tail;
 
+    private int tamanho;
+
     public Encadeada() {
     }
 
@@ -28,6 +30,14 @@ public class Encadeada {
         this.tail = tail;
     }
 
+    public int getTamanho() {
+        return tamanho;
+    }
+
+    public void setTamanho(int tamanho) {
+        this.tamanho = tamanho;
+    }
+
     public void add(int element){
         Node no = new Node(element);
         if (this.head==null && this.tail==null){
@@ -37,6 +47,7 @@ public class Encadeada {
             this.tail.setNext(no);
             this.tail = no;
         }
+        this.tamanho++;
     }
 
     public void remove(int element){
@@ -61,9 +72,20 @@ public class Encadeada {
         return"o elemento "+existe+" pertence a lista";
     }
 
-    public void addMantendo(int element){
-        Node no = new Node(element);
-        while (this.head.getElement()>=no.getElement() &&  )
+    public void addNaOrdem(int element){
+        Node novo = new Node(element);
+        if (novo.getElement()<this.head.getElement()){
+            novo.setNext(this.head);
+            this.tail = this.head;
+            this.head = novo;
+            tamanho++;
+
+        }else if (novo.getElement()>this.head.getElement() && novo.getElement()<this.tail.getElement()){
+            novo.setNext(this.head.getNext());
+            this.head.setNext(novo);
+
+
+        }
     }
 
 }

@@ -83,13 +83,16 @@ public class Encadeada {
         }else {
             Node p;
             p = this.head;
-            while (novo.getElement()> p.getElement()){
-                if (novo.getElement()<p.getNext().getElement()){
+            while (p!=null){
+                if (novo.getElement()>=p.getElement() && novo.getElement()<=p.getNext().getElement()){
                     novo.setNext(p.getNext());
                     p.setNext(novo);
+                    break;
+                }else{
+                    p = p.getNext();
                 }
 
-                p.setNext(novo);
+
 
             }
         }

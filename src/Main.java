@@ -9,6 +9,9 @@ public class Main {
         lista.addNaOrdem(1);
         lista.addNaOrdem(3);
         lista.addNaOrdem(5);
+        lista.addNaOrdem(10);
+        lista.addNaOrdem(2);
+        lista.addNaOrdem(55);
 
         lista.retorno();
 

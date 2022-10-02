@@ -1,17 +1,17 @@
 import lista.Encadeada;
-
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
 
         Encadeada lista = new Encadeada();
         lista.add(777);
-        lista.add(21312);
-        lista.addNaOrdem(1);
-        lista.addNaOrdem(3);
-        lista.addNaOrdem(5);
-        lista.addNaOrdem(10);
-        lista.addNaOrdem(2);
-        lista.addNaOrdem(55);
+
+        lista.add(4);
+        lista.add(3);
+        lista.removerPar();
+
+
 
         lista.retorno();
 

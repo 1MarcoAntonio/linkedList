@@ -107,5 +107,20 @@ public class Encadeada {
 
     }
 
+    public void removerPar(){
+        Node anterior = null;
+        Node atual = this.head;
+        while (atual!=null){
+            if (atual.getElement()%2==0){
+                anterior.setNext(atual.getNext());
+
+
+            }
+            anterior = atual;
+            atual = atual.getNext();
+
+        }
+    }
+
 
 }
